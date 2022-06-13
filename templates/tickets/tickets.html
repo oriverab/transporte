@@ -70,6 +70,7 @@
                 <th>usuarios_id</th>
                 <th>buses_id</th>
                 <th>rutas_id</th>
+                <th>puestos</th>
                 <th>Acciones</th>
                 <th>Acciones</th>
     
@@ -84,6 +85,7 @@
             <td>{{ticket.usuarios_id}}</td>
             <td>{{ticket.buses_id}}</td>
             <td>{{ticket.rutas_id}}</td>
+            <td>{{ticket.puestos}}</td>
             <td><a href="editar_tickets/{{ticket.id}}" type="button" class="btn btn-warning">Modificar</a>
             </td>
             <td><a onclick="return confirm('esta seguro que desea borrar el ticket');"  href="borrar_tickets/{{ticket.id}}" type="button" class="btn btn-danger">Eliminar</a></td></td>

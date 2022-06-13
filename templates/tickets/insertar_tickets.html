@@ -1,6 +1,7 @@
 {% extends "menu.html" %}
 {% block titulo %} Crear Tiquetes {%endblock%}
 {% block contenido %} 
+{% load static%}
 <br><br><br><br><br>
     <section class="contact section-padding" id="section_7">
         <div class="container">
@@ -18,18 +19,22 @@
                                 {{form.fecha}}                            
                             </div>
                             <div class="col-lg-6 col-md-6 col-6">  
-                                <label>Seleccione su ruta</label>      
+                                <label>Seleccione su bus</label>      
                                 {{form.buses_id }}   
                             </div>
                          
                             <div class="col-lg-6 col-md-6 col-6">   
-                                <label>Seleccione Bus</label>
+                                <label>Seleccione ruta</label>
                                 {{form.rutas_id}}                                 
                             </div>
 
                             <div class="col-lg-6 col-md-6 col-6">    
                                 <label>Seleccione Pasajero</label>
                                 {{form.usuarios_id}}     
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">    
+                                <label>Seleccione los puestos a ocupar</label>
+                                {{form.puestos}}     
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="form-control">{{boton}}</button>

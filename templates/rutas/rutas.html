@@ -81,9 +81,9 @@
             <td>{{ruta.nombre}}</td>
             <td>{{ruta.ciudad_origen}}</td>
             <td>{{ruta.ciudad_destino}}</td>
-            <td><a href="editar_ruta/{{ruta.id}}" type="button" class="btn btn-warning">Modificar</a>
+            <td><a href="editar_rutas/{{ruta.id}}" type="button" class="btn btn-warning">Modificar</a>
             </td>
-            <td><a onclick="return confirm('esta seguro que desea borrar el ruta');"  href="borrar_ruta/{{ruta.id}}" type="button" class="btn btn-danger">Eliminar</a></td></td>
+            <td><a onclick="return confirm('esta seguro que desea borrar el ruta');"  href="borrar_rutas/{{ruta.id}}" type="button" class="btn btn-danger">Eliminar</a></td></td>
             </tr>
      {% endfor %}
         </tbody>
