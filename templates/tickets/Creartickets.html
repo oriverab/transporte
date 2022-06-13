@@ -1,0 +1,44 @@
+{% extends "menu.html" %}
+{% block titulo %} Crear Tiquetes {%endblock%}
+{% block contenido %} 
+<br><br><br><br><br>
+    <section class="contact section-padding" id="section_7">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12 mx-auto">
+                    <form class="custom-form contact-form bg-white shadow-lg" method="post" role="form">
+                        {% csrf_token %}
+                        {% block form_crear %}
+                        <h2>{{titulo}}</h2>
+                        {% endblock form_crear%}
+                        <div class="row">
+                            {{form.errors}}
+                            <div class="col-lg-6 col-md-6 col-12">        
+                                <label>Seleccione fecha de viaje</label>
+                                {{form.fecha}}                            
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">  
+                                <label>Seleccione su ruta</label>      
+                                {{form.buses_id }}   
+                            </div>
+                         
+                            <div class="col-lg-6 col-md-6 col-6">   
+                                <label>Seleccione Bus</label>
+                                {{form.rutas_id}}                                 
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-6">    
+                                <label>Seleccione Pasajero</label>
+                                {{form.usuarios_id}}     
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="form-control">{{boton}}</button>
+                            </div>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br><br>
+{% endblock %}
